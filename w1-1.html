@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>個人介紹頁面</title>
+    <link rel="stylesheet" href="w1-2.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul class="nav-list">
+                <li><a href="#" onclick="showContent('intro')">個人介紹</a></li>
+                <li><a href="#" onclick="showContent('hobbies')">興趣</a></li>
+                <li><a href="#" onclick="showContent('skills')">技能</a></li>
+                <li><a href="#" onclick="showContent('contact')">聯絡方式</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <section id="intro" class="content-section">
+            <h2>個人介紹</h2>
+            <p>我是一位軟體工程師</p>
+        </section>
+        <section id="hobbies" class="content-section">
+            <h2>興趣</h2>
+            <p>喜歡打籃球</p>
+        </section>
+        <section id="skills" class="content-section">
+            <h2>技能</h2>
+            <p>精通各式程式語言</p>
+        </section>
+        <section id="contact" class="content-section">
+            <h2>聯絡方式</h2>
+            <p>09-XXXXXXXX</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2025 我的個人網頁 | 所有權利保留</p>
+    </footer>
+
+    <script>
+        function showContent(section) {
+            // 隱藏所有區域
+            document.querySelectorAll('.content-section').forEach(function(section) {
+                section.style.display = 'none';
+            });
+            // 顯示選中的區域
+            document.getElementById(section).style.display = 'block';
+        }
+
+        // 頁面載入時預設顯示「個人介紹」
+        window.onload = function() {
+            showContent('intro');
+        };
+    </script>
+</body>
+</html>
